@@ -968,9 +968,9 @@
                 return inputDate;
             },
 
-			getSvgIcon = function (icon) {
-				return '<svg viewBox="0 0 24 24" class="icon"><use xlink:href="store.svg#'+icon+'"></use></svg>';
-			},
+            getSvgIcon = function (icon) {
+                return '<svg viewBox="0 0 24 24" class="icon"><use xlink:href="store.svg#' + icon + '"></use></svg>';
+            },
 
             /********************************************************************************
              *
