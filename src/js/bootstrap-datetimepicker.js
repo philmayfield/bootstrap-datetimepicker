@@ -969,7 +969,7 @@
             },
 
             getSvgIcon = function (icon) {
-                return '<svg viewBox="0 0 24 24" class="icon"><use xlink:href="store.svg#' + icon + '"></use></svg>';
+                return '<svg viewBox="0 0 24 24" class="icon"><use xlink:href="' + options.pathToSvg + '#' + icon + '"></use></svg>';
             },
 
             /********************************************************************************
@@ -2463,6 +2463,7 @@
         defaultDate: false,
         disabledDates: false,
         enabledDates: false,
+		pathToSvg: '',
         icons: {
             time: 'clock',
             date: 'calendar',
