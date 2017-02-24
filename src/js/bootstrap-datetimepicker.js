@@ -2204,6 +2204,19 @@
             return picker;
         };
 
+		picker.pathToSvg = function (pathToSvg) {
+            if (arguments.length === 0) {
+                return options.pathToSvg;
+            }
+
+            if (typeof pathToSvg !== 'string') {
+                throw new TypeError('pathToSvg() expects a string parameter');
+            }
+
+            options.pathToSvg = pathToSvg;
+            return picker;
+        };
+
         picker.disabledTimeIntervals = function (disabledTimeIntervals) {
             ///<signature helpKeyword="$.fn.datetimepicker.disabledTimeIntervals">
             ///<summary>Returns an array with the currently set disabled dates on the component.</summary>
@@ -2463,7 +2476,7 @@
         defaultDate: false,
         disabledDates: false,
         enabledDates: false,
-		pathToSvg: '',
+		pathToSvg: 'assets/svg/store.svg',
         icons: {
             time: 'clock',
             date: 'calendar',
