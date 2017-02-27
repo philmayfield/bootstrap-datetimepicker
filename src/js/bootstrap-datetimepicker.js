@@ -969,7 +969,8 @@
             },
 
             getSvgIcon = function (icon, color) {
-                return '<svg viewBox="0 0 24 24" class="icon ' + color + '"><use xlink:href="' + options.pathToSvg + '#' + icon + '"></use></svg>';
+				var c = color ? color : '';
+                return '<svg viewBox="0 0 24 24" class="icon ' + c + '"><use xlink:href="' + options.pathToSvg + '#' + icon + '"></use></svg>';
             },
 
             /********************************************************************************
