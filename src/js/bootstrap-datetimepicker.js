@@ -238,11 +238,11 @@
 
                 if (isEnabled('h')) {
                     topRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementHour }).addClass('btn').attr('data-action', 'incrementHours').append(getSvgIcon(options.icons.up))));
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementHour }).addClass('btn btn-primary').attr('data-action', 'incrementHours').append(getSvgIcon(options.icons.up))));
                     middleRow.append($('<td>')
                         .append($('<span>').addClass('timepicker-hour').attr({ 'data-time-component': 'hours', 'title': options.tooltips.pickHour }).attr('data-action', 'showHours')));
                     bottomRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementHour }).addClass('btn').attr('data-action', 'decrementHours').append(getSvgIcon(options.icons.down))));
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementHour }).addClass('btn btn-primary').attr('data-action', 'decrementHours').append(getSvgIcon(options.icons.down))));
                 }
                 if (isEnabled('m')) {
                     if (isEnabled('h')) {
@@ -251,12 +251,12 @@
                         bottomRow.append($('<td>').addClass('separator'));
                     }
                     topRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementMinute }).addClass('btn').attr('data-action', 'incrementMinutes')
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementMinute }).addClass('btn btn-primary').attr('data-action', 'incrementMinutes')
                             .append(getSvgIcon(options.icons.up))));
                     middleRow.append($('<td>')
                         .append($('<span>').addClass('timepicker-minute').attr({ 'data-time-component': 'minutes', 'title': options.tooltips.pickMinute }).attr('data-action', 'showMinutes')));
                     bottomRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementMinute }).addClass('btn').attr('data-action', 'decrementMinutes')
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementMinute }).addClass('btn btn-primary').attr('data-action', 'decrementMinutes')
                             .append(getSvgIcon(options.icons.down))));
                 }
                 if (isEnabled('s')) {
@@ -266,12 +266,12 @@
                         bottomRow.append($('<td>').addClass('separator'));
                     }
                     topRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementSecond }).addClass('btn').attr('data-action', 'incrementSeconds')
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementSecond }).addClass('btn btn-primary').attr('data-action', 'incrementSeconds')
                             .append(getSvgIcon(options.icons.up))));
                     middleRow.append($('<td>')
                         .append($('<span>').addClass('timepicker-second').attr({ 'data-time-component': 'seconds', 'title': options.tooltips.pickSecond }).attr('data-action', 'showSeconds')));
                     bottomRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementSecond }).addClass('btn').attr('data-action', 'decrementSeconds')
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementSecond }).addClass('btn btn-primary').attr('data-action', 'decrementSeconds')
                             .append(getSvgIcon(options.icons.down))));
                 }
 
