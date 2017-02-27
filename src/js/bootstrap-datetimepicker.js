@@ -1102,15 +1102,18 @@
                     setValue(date.clone().add((date.hours() >= 12) ? -12 : 12, 'h'));
                 },
 
-                togglePicker: function (e) {
+				togglePicker: function (e) {
                     var $this = $(e.target),
                         $parent = $this.closest('ul'),
                         expanded = $parent.find('.in'),
                         closed = $parent.find('.collapse:not(.in)'),
-                        collapseData;
+						$target,
+                        collapseData,
+						collapser;
 
                     if (expanded && expanded.length) {
                         collapseData = expanded.data('collapse');
+						collapser = closed.children().attr('class');
                         if (collapseData && collapseData.transitioning) {
                             return;
                         }
@@ -1122,15 +1125,16 @@
                             closed.addClass('in');
                         }
                         if ($this.is('a')) {
-                            //$this.html(getSvgIcon(options.icons.time));
-							console.log('anchor');
+							$target = $this;
                         } else {
-                            //$this.closest('a').toggleClass(options.icons.time + ' ' + options.icons.date);
-							console.log('not anchor', $this);
+							$target = $this.closest('a');
                         }
 
-						console.log('expanded is ', expanded);
-						console.log('closed is ', closed);
+						if (collapser == 'datepicker') {
+							$target.html(getSvgIcon(options.icons.time));
+						} else {
+							$target.html(getSvgIcon(options.icons.date));
+						}
 
                         // NOTE: uncomment if toggled state will be restored in show()
                         //if (component) {
