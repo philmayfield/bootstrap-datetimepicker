@@ -315,7 +315,7 @@
                     row.push($('<td>').append($('<a>').attr({ 'data-action': 'today', 'title': options.tooltips.today }).append(getSvgIcon(options.icons.today))));
                 }
                 if (!options.sideBySide && hasDate() && hasTime()) {
-                    row.push($('<td>').append($('<a>').attr({ 'data-action': 'togglePicker', 'title': options.tooltips.selectTime }).append(getSvgIcon(options.icons.time))));
+                    row.push($('<td>').append($('<a>').addClass('togglePicker').attr({ 'data-action': 'togglePicker', 'title': options.tooltips.selectTime }).append(getSvgIcon(options.icons.time))));
                 }
                 if (options.showClear) {
                     row.push($('<td>').append($('<a>').attr({ 'data-action': 'clear', 'title': options.tooltips.clear }).append(getSvgIcon(options.icons.clear))));
