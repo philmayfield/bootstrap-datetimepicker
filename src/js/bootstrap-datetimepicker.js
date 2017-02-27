@@ -238,11 +238,11 @@
 
                 if (isEnabled('h')) {
                     topRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementHour }).addClass('btn btn-primary').attr('data-action', 'incrementHours').append(getSvgIcon(options.icons.up))));
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementHour }).addClass('btn btn-primary').attr('data-action', 'incrementHours').append(getSvgIcon(options.icons.up, 'white'))));
                     middleRow.append($('<td>')
                         .append($('<span>').addClass('timepicker-hour').attr({ 'data-time-component': 'hours', 'title': options.tooltips.pickHour }).attr('data-action', 'showHours')));
                     bottomRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementHour }).addClass('btn btn-primary').attr('data-action', 'decrementHours').append(getSvgIcon(options.icons.down))));
+                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementHour }).addClass('btn btn-primary').attr('data-action', 'decrementHours').append(getSvgIcon(options.icons.down, 'white'))));
                 }
                 if (isEnabled('m')) {
                     if (isEnabled('h')) {
@@ -252,12 +252,12 @@
                     }
                     topRow.append($('<td>')
                         .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementMinute }).addClass('btn btn-primary').attr('data-action', 'incrementMinutes')
-                            .append(getSvgIcon(options.icons.up))));
+                            .append(getSvgIcon(options.icons.up, 'white'))));
                     middleRow.append($('<td>')
                         .append($('<span>').addClass('timepicker-minute').attr({ 'data-time-component': 'minutes', 'title': options.tooltips.pickMinute }).attr('data-action', 'showMinutes')));
                     bottomRow.append($('<td>')
                         .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementMinute }).addClass('btn btn-primary').attr('data-action', 'decrementMinutes')
-                            .append(getSvgIcon(options.icons.down))));
+                            .append(getSvgIcon(options.icons.down, 'white'))));
                 }
                 if (isEnabled('s')) {
                     if (isEnabled('m')) {
@@ -267,12 +267,12 @@
                     }
                     topRow.append($('<td>')
                         .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementSecond }).addClass('btn btn-primary').attr('data-action', 'incrementSeconds')
-                            .append(getSvgIcon(options.icons.up))));
+                            .append(getSvgIcon(options.icons.up, 'white'))));
                     middleRow.append($('<td>')
                         .append($('<span>').addClass('timepicker-second').attr({ 'data-time-component': 'seconds', 'title': options.tooltips.pickSecond }).attr('data-action', 'showSeconds')));
                     bottomRow.append($('<td>')
                         .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementSecond }).addClass('btn btn-primary').attr('data-action', 'decrementSeconds')
-                            .append(getSvgIcon(options.icons.down))));
+                            .append(getSvgIcon(options.icons.down, 'white'))));
                 }
 
                 if (!use24Hours) {
@@ -968,8 +968,8 @@
                 return inputDate;
             },
 
-            getSvgIcon = function (icon) {
-                return '<svg viewBox="0 0 24 24" class="icon"><use xlink:href="' + options.pathToSvg + '#' + icon + '"></use></svg>';
+            getSvgIcon = function (icon, color) {
+                return '<svg viewBox="0 0 24 24" class="icon ' + color + '"><use xlink:href="' + options.pathToSvg + '#' + icon + '"></use></svg>';
             },
 
             /********************************************************************************
