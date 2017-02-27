@@ -1121,11 +1121,16 @@
                             expanded.removeClass('in');
                             closed.addClass('in');
                         }
-                        if ($this.is('span')) {
-                            $this.toggleClass(options.icons.time + ' ' + options.icons.date);
+                        if ($this.is('a')) {
+                            //$this.html(getSvgIcon(options.icons.time));
+							console.log('anchor');
                         } else {
-                            $this.find('span').toggleClass(options.icons.time + ' ' + options.icons.date);
+                            //$this.closest('a').toggleClass(options.icons.time + ' ' + options.icons.date);
+							console.log('not anchor', $this);
                         }
+
+						console.log('expanded is ', expanded);
+						console.log('closed is ', closed);
 
                         // NOTE: uncomment if toggled state will be restored in show()
                         //if (component) {
