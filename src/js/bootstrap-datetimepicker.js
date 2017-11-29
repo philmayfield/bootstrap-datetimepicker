@@ -2486,7 +2486,7 @@
         defaultDate: false,
         disabledDates: false,
         enabledDates: false,
-		pathToSvg: 'assets/svg/store.svg',
+		pathToSvg: '/assets/svg/store.svg',
         icons: {
             time: 'clock',
             date: 'calendar',
